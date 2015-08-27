@@ -22,4 +22,4 @@ And also some matrices come from two popular test matrix collections:
 
 !!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
 
-!!!  I put them here just for my convenience of research program.
+!!!  I put them here just for the convenience of my research program.
