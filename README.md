@@ -15,7 +15,7 @@ Some test matrices for shifted Krylov subspace methods
 (A - sigma_i *I) = b, sigma_i \in \mathbb{C}, i = 1,2,...,t.
 
 These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof. Gerard L.G. Sleijpen 
-(Homepage: http://www.staff.science.uu.nl/~sleij101/, but recently this link of his NLA Course is not available), 
+(Homepage: http://www.staff.science.uu.nl/~sleij101/, but recently the link of his NLA Course is not available), 
 And also some matrices come from two popular test matrix collections:
 
 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
