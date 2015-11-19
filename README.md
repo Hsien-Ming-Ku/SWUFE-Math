@@ -15,7 +15,7 @@ Some test matrices are used for investigating the performance of shifted Krylov 
 (A - sigma_i *I) = b, sigma_i \in \mathbb{C}, i = 1,2,...,t.
 
 These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof. Gerard L.G. Sleijpen 
-(Mathematical Institute, Utrecht University, The Netherlands, Homepage: http://www.staff.science.uu.nl/~sleij101/, but recently the link of his NLA Course is not available). And also some matrices come from two popular test matrix collections:
+(Mathematical Institute, Utrecht University, The Netherlands, Homepage: http://www.staff.science.uu.nl/~sleij101/, but recently the link of his NLA Course is often badly available). Moreover, some matrices come from two popular test matrix collections:
 
 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
 2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/
