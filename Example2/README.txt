@@ -5,10 +5,10 @@ More precisely, the three test matrices are from
 the second example of our paper [1], 
 
 Reference,
-1. X.-M. Gu, B. Carpentieri, and T.-Z. Huang, Block variants 
-of COCG and COCR for complex symmetric linear systems with
-multiple right-hand sides, arXiv preprint, January 2016, 
-8 pages. 
+1. X.-M. Gu, B. Carpentieri, T.-Z. Huang, and J. Meng, Block 
+variants of the COCG and COCR methods for solving complex 
+symmetric linear systems with multiple right-hand sides, arXiv 
+preprint, January 2016, 8 pages. 
 
 
 !!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
