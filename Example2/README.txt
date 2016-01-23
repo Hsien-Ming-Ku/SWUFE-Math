@@ -8,7 +8,8 @@ Reference,
 1. X.-M. Gu, B. Carpentieri, T.-Z. Huang, and J. Meng, Block 
 variants of the COCG and COCR methods for solving complex 
 symmetric linear systems with multiple right-hand sides, arXiv 
-preprint, January 2016, 8 pages. 
+preprint, 20 January 2016, 9 pages. Available online at 
+http://arxiv.org/abs/1601.05362
 
 
 !!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
