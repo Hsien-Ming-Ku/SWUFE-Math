@@ -1,6 +1,6 @@
 The three test matrices are used to illustrate our newly 
 proposed Block COCG and Block COCR methods, which are 
-from our recent paper for conference "ENUMATH2015". 
+from our recent paper prepared for conference "ENUMATH2015". 
 More precisely, the three test matrices are from 
 the second example of our paper [1], 
 
