@@ -9,7 +9,8 @@ Reference,
 variants of the COCG and COCR methods for solving complex 
 symmetric linear systems with multiple right-hand sides, arXiv 
 preprint, 20 January 2016, 9 pages. Available online at 
-http://arxiv.org/abs/1601.05362.
+http://arxiv.org/abs/1601.05362. (Recently accepted by the 
+Proceeding of ENUMATH 2015)
 
 
 !!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
