@@ -5,8 +5,7 @@ Certainly, these matrices also can be used for investigating the performance
 of Krylov subspace method for A*x = b and the corresponding preconditioning 
 techniques.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------------------------------
 
 !!! NOTE:
 
@@ -23,3 +22,8 @@ These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof
 !!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
 
 !!!  I put them here just for the convenience of my research program.
+
+% Good news: 
+Dear everyone, recently I plan to post some frequently-used test matrices in my repositories. I will devide them 
+into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian matrices", "Structured matrices" and "dense 
+matrices". Then a User's guide will be given and updated. 
