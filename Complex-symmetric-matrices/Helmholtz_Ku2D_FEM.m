@@ -1,21 +1,35 @@
-%---------------------------------------------------------------
-%
+function [U, H, L1, f1] = Helmholtz_Ku2D_FEM
+% Usage:Solve Helmholtz Equation in 2-D square S = [0,1]X[0,1].
+% \Delta u + k^2 *u + i*k*\sigma u = 0  in S
+% u = f on boundary.   on \partial S
+% input: 
+%   k: wave number, can be complex number, if k bigger, the coefficient  
+%      matrix will be ill-conditioned;
+%   m,n : nodes on the sides.
+%set up mesh. 
+% This function will generate the complex symmetric linear systems 
+%                 A * x = b,  (i.e, A ---> L1, b ---> f1 )
+% A is a complex symmetric matix;
+% ---------------------------------------------------------------
 %	Helmholtz Equation.
 %	
 %	Author: Yimin Zhong
 %	Last Modified Date: July 5th, 2012
 %	Version: 0.0.2
 %	Platform: matlab 2009b
-%
-%---------------------------------------------------------------                                                                      
-function [U, H, L1, f1] = Helmholtz_Ku
-% Usage:Solve Helmholtz Equation in 2-D square S = [0,1]X[0,1].
-% \Delta u + k^2 *u + i*k*\sigma u = 0  in S
-% u = f on boundary.   on \partial S
-% input: 
-%   k: wave number, can be complex number
-%   m,n : nodes on the sides.
-%set up mesh. 
+% --------------------------------------------------------------
+% Copyright by (modified) 
+% Mr. Xian-Ming Gu, who works as a PhD student in School of Mathematical
+% Sciences, University of Electronic Science and Technology of China 
+% (UESTC). From 1 August, 2014 to 1 Augest, 2016, He also work in the 
+% Johann Bernoulli Institute for Mathematics and Computer Science (JBI), 
+% University of Groningen (RUG). Prof. Ting-Zhu Huang (UESTC) and Dr. Bruno
+% Carpentieri (RUG) are Xian-Ming's supervisor for PhD program.
+% --------------------------------------------------------------------
+% Email: guxianming@live.cn
+% URL: https://github.com/Hsien-Ming-Ku
+% Date: 28-4-2016, 16:47 (The Netherlands)
+% ---------------------------------------------------------
 k = 3;
 m = 61;
 n = 61;
