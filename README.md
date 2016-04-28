@@ -30,4 +30,6 @@ matrices", "Structured matrices" and "dense matrices". Then a User's guide will 
 
 !!!!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
-X.-M. Gu, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, B. Carpentieri, UESTC-Math Matrix Library based on MATLAB: Linear System and Eigenvalue Problem, Technical Report, version 1.0, School of Mathematical Sciences, University of Electronic Science and Technology of China, April, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
+X.-M. Gu, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, B. Carpentieri, Y.-L. Zhao, UESTC-Math Matrix Library based on MATLAB: Linear 
+System and Eigenvalue Problem, Technical Report, version 1.0, School of Mathematical Sciences, University of Electronic Science 
+and Technology of China, April, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
