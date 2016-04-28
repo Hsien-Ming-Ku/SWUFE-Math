@@ -24,6 +24,10 @@ These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof
 !!!  I put them here just for the convenience of my research program.
 
 % Good news: 
-Dear everyone, recently I plan to post some frequently-used test matrices in my repositories. I will devide them 
-into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian matrices", "Structured matrices" and "dense 
-matrices". Then a User's guide will be given and updated. 
+Dear everyone, recently I plan to post some frequently-used test matrices in my repositories. We named this collection as 
+"UESTC-Math Matrix Library". I will devide them into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian 
+matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. 
+
+!!!!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
+
+X.-M. Gu, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, B. Carpentieri, UESTC-Math Matrix Library based on MATLAB: Linear System and Eigenvalue Problem, Technical Report, version 1.0, School OF Mathematical Sciences, University of Electronic Science and Technology of China, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
