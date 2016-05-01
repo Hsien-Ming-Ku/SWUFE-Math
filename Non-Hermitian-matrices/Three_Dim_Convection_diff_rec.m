@@ -21,7 +21,7 @@ function [A,b] = Three_Dim_Convection_diff_rec(n,q,p,opt)
 % --------------------------------------------------------------------
 % Email: guxianming@live.cn
 % URL: https://github.com/Hsien-Ming-Ku
-% Date: 28-4-2016, 11:41 (The Netherlands)
+% Date: 2-5-2016, 00:25 (The Netherlands)
 % -------------------------------------------------------------------
 h = 1/(n + 1);
 r = q*h/2;
