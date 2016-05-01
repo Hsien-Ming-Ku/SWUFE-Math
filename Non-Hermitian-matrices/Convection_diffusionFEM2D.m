@@ -1,5 +1,5 @@
-function [A,b] = MAT521pb1
-% solves the 2D convection diffusion-diffusion equation
+function [A,b] = Convection_diffusionFEM2D
+% solves the 2D convection-diffusion equation
 %          -nu (u_xx+u_yy) + wx u_x + wy u_y + la u = f
 % in the square domain [0,1] x [0,1] with Dirichlet boundary conditions 
 % u = g using piecewise linear triangular finite elements; refer to 
