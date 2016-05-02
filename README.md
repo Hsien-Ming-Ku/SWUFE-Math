@@ -32,4 +32,4 @@ matrices", "Structured matrices" and "dense matrices". Then a User's guide will 
 
 X.-M. Gu, T.-Z. Huang, B. Carpentieri, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
 System and Eigenvalue Problem, Technical Report, version 1.0, School of Mathematical Sciences, University of Electronic Science 
-and Technology of China, April, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
+and Technology of China, April 26, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
