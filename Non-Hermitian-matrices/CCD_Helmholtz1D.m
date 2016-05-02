@@ -1,5 +1,30 @@
 function [A,b] = CCD_Helmholtz1D(n,k,opt)
-
+% This function is used to generate the saddle-point type linear systems
+%        [A11   A12 A13]   [1/h^2 *f]   [ 0 ]
+%        [A21   A22 A23] * [1/h *f' ] = [ 0 ]
+%        [eta*I  0   I ]   [  f''   ]   [ g ],
+% Moreover, this system is from the Combined Compact Difference Method for 
+% one-dimension Helmholtz equation, refer to [1, pp. 11-32] for details.
+% ---------------------------------------------------------------------
+% Reference:
+% 1. J. Liu, Efficient Preconditioners for the Helmholtz Equation 
+%    Discretized by Combined Compact Difference Method, Master thesis, 
+%    School of Mathematical Sciences, South China Normal University, May 
+%    2010, 70 pages. The file is also available online at 
+%    \url{http://lagrange.math.siu.edu/liu/papers/MAThesis_JunLiu.pdf}.
+% ----------------------------------------------------------------------
+% Copyright by 
+% Mr. Xian-Ming Gu, who works as a PhD student in School of Mathematical
+% Sciences, University of Electronic Science and Technology of China 
+% (UESTC). From 1 August, 2014 to 1 Augest, 2016, He also work in the 
+% Johann Bernoulli Institute for Mathematics and Computer Science (JBI), 
+% University of Groningen (RUG). Prof. Ting-Zhu Huang (UESTC) and Dr. Bruno
+% Carpentieri (RUG) are Xian-Ming's supervisor for PhD program.
+% --------------------------------------------------------------------
+% Email: guxianming@live.cn
+% URL: https://github.com/Hsien-Ming-Ku
+% Date: 2-5-2016, 17:42 (The Netherlands)
+% --------------------------------------------------------------------
 h = 1/(n - 1);
 eta = (k*h)^2;
 % ---------  Generate the sub-matrix A11  ---------------%
