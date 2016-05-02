@@ -26,7 +26,7 @@ These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof
 % Good news: 
 Dear everyone, recently I plan to post some frequently-used test matrices in my repositories. We named this collection as 
 "UESTC-Math Matrix Library". I will devide them into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian 
-matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. The update information will be given as follows.
+matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. The updated information has been given as follows.
 
 1) 17:56, 2 May, 16, I post a simple preconditioning technique named "scaling2.m";
 
