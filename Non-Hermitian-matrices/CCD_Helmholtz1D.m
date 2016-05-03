@@ -4,7 +4,11 @@ function [A,b] = CCD_Helmholtz1D(n,k,opt)
 %        [A21   A22 A23] * [1/h *f' ] = [ 0 ]
 %        [eta*I  0   I ]   [  f''   ]   [ g ],
 % Moreover, this system is from the Combined Compact Difference Method for 
-% one-dimension Helmholtz equation, refer to [1, pp. 11-32] for details.
+% one-dimension Helmholtz equation, 
+%          f''(x) + k^2 *f(x) = 1, x\in [0,1]
+%                        f(0) = 0,
+%            f'(1) - i*k*f(1) = 1;
+% refer to [1, pp. 11-32] for details.
 % ---------------------------------------------------------------------
 % Reference:
 % 1. J. Liu, Efficient Preconditioners for the Helmholtz Equation 
@@ -76,6 +80,3 @@ elseif opt==3
        g =  (-1+(1-(-1))*rand(n,1));
        b(2*n+1:end) = g;
 end
-
-
-
