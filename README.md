@@ -28,7 +28,9 @@ Dear everyone, recently I plan to post some frequently-used test matrices in my 
 "UESTC-Math Matrix Library". I will devide them into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian 
 matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. The updated information has been given as follows.
 
-1) 17:56, 2 May, 16, I post a simple preconditioning technique named "scaling2.m";
+1) 17:56, 2 May, 2016, I release a simple preconditioning technique named "scaling2.m";
+
+2) 14:58, 10 May, 2016, I upload two file "Ren.tex"  and "How to prepare your test matrices.pdf" for users, who wants to provide their test matrices for us;
 
 !!!!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
