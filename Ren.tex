@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{cite}
+%\usepackage{epstopdf}
+\usepackage[cmex10]{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+%\usepackage{txfonts}
+%\usepackage{amssymb}
+%\usepackage[T1]{fontenc}
+%\usepackage{cite}
+%\usepackage{hyperref}
+%%\usepackage{ccfonts}
+%\usepackage{latexsym}
+%\usepackage{graphicx}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+%\usepackage{setspace}
+
+\textheight=22cm \textwidth=16cm \oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+\newtheorem{corollary}{Corollary}[section]
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{remark}{Remark}[section]
+\date{}
+
+\begin{document}
+%
+%!!!!! The following parts are just given as examples, you can modified for your requirement
+%
+\title{Guidelines to Add a Linear System (or Generalized Eigenvalue Problem) to the 
+UESTC-Math Matrix Library}
+
+\author{Name of contributor$^{1,2}$\footnote{\textit{E-mail address:} firstauthor@live.cn},
+\mbox{ }Name of contributor$^1$\footnote{\textit{E-mail address:} secondauthor@126.com},
+%\mbox{ }Bruno Carpentieri$^3
+%$\footnote{\textit{E-mail address:} bcarpentieri@gmail.com},
+\\
+%Liang Li$^1$\footnote{\textit{E-mail address:} plum\_liliang@163.com},\mbox{ }
+%Yong Zhang$^1$\footnote{\textit{E-mail address:} mathzy@163.com},\mbox{ }
+%Hou-Biao Li$^1$\footnote{\textit{E-mail address:} lihoubiao0189@163.com},\mbox{ }
+%Yong-Liang Zhang$^1$\footnote{\textit{E-mail address:} m18011654445@163.com}\\
+{\footnotesize{\it 1. School of Mathematical Sciences,}}\\
+{\footnotesize{\it University of Electronic Science and Technology of China,
+Chengdu, Sichuan 611731, P.R. China}}\\
+{\footnotesize{\it 2. Institute of Mathematics and Computing Science,}}\\
+{\footnotesize{\it University of Groningen, Nijenborgh 9, PO Box 407, 9700 AK
+Groningen, the Netherlands}}
+%\\
+%{\footnotesize{\it 3. School of Science and Technology,}}\\
+%{\footnotesize{\it Nottingham Trent University, Clifton Campus, Nottingham, NG11
+%8NS, UK}}
+}
+%%%%%%%%%%
+\maketitle
+
+
+%% main text
+\section{What is your test problem~?}
+Please provide a short but comprehensive (at most five sentences long) description of your matrix problem(s), including the field or application where your problem arise from, the physical meaning of the solution, and possibly one or two related references in BibTex format.
+
+
+\section{Numerical properties of your matrices.}
+\label{sec2}
+
+Please inform us about the properties of your test matrices, such as
+\begin{itemize}
+\item size (number of rows, columns and nonzeros; matrices of size larger than 1,000  are especially welcome);
+
+\item structure (square, dense, sparse, banded, block, structurally symmetric, unstructured, Toeplitz/Hankel(-like), 
+etc)
+%
+\item symmetry (real symmetric, real general, complex symmetric, Hermitian, complex general)
+%
+\item conditioning (if available)
+
+\item physics-based right hand side vector (if available)
+%
+\item any other useful property to understand better the characteristic of the problem.
+%
+\end{itemize}
+%
+Below we provide an example of description:
+\begin{table}[!htbp]\footnotesize\tabcolsep=7pt
+\caption{{\small Set and characteristics of test matrices in Example 1 (listed in increasing matrix size).}}
+\centering
+\begin{tabular}{rrlrrr}
+\toprule
+Grid size &Matrix problem        &Reference          & Size    &Field                                   &$nnz(A)$   \\
+\hline
+1/16  &\texttt{orsirr\_2}    &Ref. \cite{1st} &886      &Oil reservoir simulation                &5,970      \\
+1/32  &\texttt{pde2961}      &Ref. \cite{1st}  &2,961    &2D/3D problem                           &14,585     \\
+1/64  &\texttt{ex36}         &Ref. \cite{2nd}  &3,079    &Computational fluid dynamics            &53,099     \\
+1/128 &\texttt{vdvorst3}     &Ref. \cite{2nd}   &4,096   &2D/3D problem                           &20,224     \\
+1/256 &\texttt{rajat13}      &Ref. \cite{3rd}  &7,598   &Circuit simulation problem              &48,762     \\
+1/512 &\texttt{M4D2}         &Ref. \cite{3rd}  &10,000  &Quantum mechanics                       &127,400    \\
+\bottomrule
+\end{tabular}
+\label{tab1}
+\end{table}
+%
+
+Finally, please specify the storage format used to supply your test matrices, e.g.~\texttt{*.m}, \texttt{*.mat}, \texttt{*.txt},
+\texttt{*.dat}, \texttt{*.bin}, $\ldots$, or if a matrix generator is available to create matrices using different  input parameters and having different size and levels of difficulty for our numerical experiments.
+%
+
+PS: Now, our test matrices corresponding to linear systems $A{\bm x} = {\bm b}$ in 
+MATLAB format are partly available online at \url{https://github.com/Hsien-Ming-Ku/Test_matrices}.
+
+
+
+\begin{thebibliography}{1}
+% !!!! just for examples, you can replace them by your references
+\bibitem{1st}
+C. Lin, Q. Wang, T. Lee, A less conservative robust stability test for linear
+uncertain time-delay systems, IEEE Trans. Automat. Control., 51 (2006),
+pp. 87-91.
+%
+\bibitem{2nd}
+J. Hale, S. Lunel, Introduction to Functional Differential Equations, Springer-Verlag,
+New York, USA, 1993.
+
+\bibitem{3rd}
+M. Clemens, T. Weiland, Iterative methods for the solution of very large complex-symmetric
+linear systems of equations in electromagnetics, in \textit{Eleventh Copper Mountain
+Conference on Iterative Methods}, Part 2, T.A. Manteuffel, S.F. McCormick (Eds.),
+1996, 7 pages.
+
+%\bibitem{4}K. Gu, V. Kharitonov, J. Chen,
+%           Stability of time-delay systems, Birkhauser; 2003.
+%\bibitem{5}
+%\bibitem{6}Y. He, Q. Wang, C. Lin, M. Wu,
+%           Delay-range-dependent stability for systems with time-varying delay,
+%           Automatica 43 (2007) 371-376.
+%
+%\bibitem{7} E. Fridman, U. Shaked, K. Liu,
+%           New conditions for delay-derivative-dependent stability,
+%           Automatica 45 (2009) 2723-2727.
+%\bibitem{8}P. Liu,
+%           Improved delay-dependent robust stability criteria for recurrent neural networks with time-varying delays,
+%           ISA Transactions 52 (2013) 30-35.
+%\bibitem{9}N. Xiao, Y. Jia,
+%           New approaches on stability criteria for neural networks with two additive time-varying delay components,
+%           Neurocomputing 118 (2013) 150-156.
+%\bibitem{10}J. Cheng, H. Zhu, S. Zhong, Y. Zhang, Y. Zeng,
+%           Improved delay-dependent stability criteria for continuous system with two additive time-varying delay components,
+%           Commun Nonlinear Sci Numer Simulat 19 (2014) 210-215.
+%\bibitem{11}Y. He, G. Liu, D. Rees,
+%            New delay-dependent stability criteria for neural networks with time-varying delay,
+%            IEEE Trans. Neural Netw. 18 (2007) 310-314.
+%\bibitem{12}Y. Zhao, H. Gao, S. Mou,
+%            Asymptotic stability analysis of neural networks with successive time delay components,
+%            Neurocomputing 71 (2008) 2848-2856.
+%\bibitem{13}H. Shao, Q. Han,
+%            New delay-dependent stability criteria for neural networks with two additive time-varying delay components,
+%            IEEE Trans. Neural Netw. 22 (2011) 812-818.
+%\bibitem{14}K. Gopalsamy, Leakage delays in BAM, J. Math. Anal. Appl. 325 (2007) 1117-1132.
+%\bibitem{15}C. Li, T. Huang,
+%            On the stability of nonlinear systems with leakage delay,
+%            J. Franklin Inst. 346 (2009) 366-377.
+%\bibitem{16}X. Li, J. Cao,
+%            Delay-dependent stability of neural networks of neutral type with time delay in the leakage term,
+%            Nonlinearity 23 (2010) 1709-1726.
+%\bibitem{17}S. Peng,
+%            Global attractive periodic solutions of BAM neural networks with continuously distributed delays in the leakage terms,
+%            Nonlinear Anal. Real World Appl. 11 (2010) 2141-2151.
+%\bibitem{18}X. Li, X. Fu, P. Balasubramaniam, R. Rakkiyappan,
+%            Existence, uniqueness and stability analysis of recurrent neural networks with time delay in the leakage term under impulsive perturbations,
+%            Nonlinear Anal. Real World Appl. 11 (2010) 4092-4108.
+%\bibitem{19}S. Lakshmanan, J. Park, T. Lee, H. Jung, R. Rakkiyappan,
+%            Stability criteria for BAM neural networks with leakage delays and probabilistic time-varying delays,
+%            Appl. Math. Comput. 219 (2013) 9408-9423.
+%\bibitem{20}X. Li, X. Fu, R. Rakkiyappan,
+%            Delay-dependent stability analysis for a class of dynamical systems with leakage delay and nonlinear perturbations,
+%            Appl. Math. Comput. 226 (2014) 10-19.
+%\bibitem{21}S.Lakshmanan, J. Park, H. Yung, P. Balasubramaniam,
+%            Design of state estimator for neural networks with leakage, discrete and distributed delays,
+%            Appl. Math. Comput. 218 (2012) 11297-11310.
+%\bibitem{22}Z. Zhao, Q. Song, S. He,
+%            Passivity analysis of stochastic neural networks with time-varying delays and leakage delay,
+%            Neurocomputing 125 (2014) 22-27.
+%\bibitem{23}Q. Song, J. Cao,
+%            Passivity of uncertain neural networks with both leakage delay and time-varying delay,
+%            Nonlinear Dyn. 67 (2012) 1695-1707.
+%\bibitem{24} D. zhang, L. Yu,
+%             $H_\infty$ filtering for linear neutral systems with mixed time-varying delays and nonlinear perturbations,
+%             J. Franklin Inst.347 (2010) 1374-1390.
+%\bibitem{25}Q. Han,
+%            Robust stability for a class of linear systems with time-varying delay and nonlinear perturbations,
+%            Comput. Math. Appl. 47 (2004) 1201-1209.
+%\bibitem{26}J. Park,
+%            Novel robust stability criterion for a class of neutral systems with mixed delays and nonlinear perturbations, Appl. Math. Comput. 161 (2005) 413-421.
+%\bibitem{27}W. Zhang, X. Cai, Z.Han,
+%            Robust stability criteria for systems with inverval time-varying delay and nonlinear perturbations,
+%            J. Comput. Appl. Math. 234 (2010) 174-180.
+%\bibitem{28}O. Kwon, M. Park, J. Park, S. Lee, E. Cha,
+%            New delay-partitioning approaches to stability criteria for uncertain neutral systems with time-varying delay,
+%            J. Franklin Inst. 349 (2012) 2799-2823.
+%\bibitem{29}M. Park, O. Kwon, J. Park, S. lee, E. Cha,
+%            Synchronization criteria for coupled neural networks with interval time-varying delays and leakage delay,
+%            Appl. Math. Comput. 218 (2012) 6762-6775.
+%\bibitem{30}R. Lu, H. Wu, J. Bai,
+%            New delay-dependent robust stability criteria for uncertain neutral systems with mixed delays,
+%            J. Franklin Inst. 351 (3) (2014) 1386-1399.
+%\bibitem{31} Z. Wu, J.H. Park, H. Su, J. Chu,
+%            Passivity analysis of Markov jump neural networks with mixed time-delays and piecewise-constant transition rates, Nonlinear Anal. Real World Appl. 13 (2012) 2423-2431.
+%\bibitem{32} Z. Wu, J.H. Park, H. Su, J. Chu,
+%             New results on exponential passivity of neural networks with time-delays,
+%             Nonlinear Anal. Real World Appl. 13 (2012) 1593-1599.
+%\bibitem{33}D.H. Ji, J.H. Koo, S.C. Won, S.M. Lee, J.H. Park,
+%            Passivity-based control for Hopfield neural networks using convex representation,
+%            Appl. Math. Comput. 217 (2011) 6168-6175.
+%\bibitem{34}T. Lee, J. Park, O. Kwon, S. Lee,
+%            Stochastic sampled-data control for state estimation of time-varying delayed neural networks,
+%            Neural Netw. 46 (2013) 99-108.
+%\bibitem{35}O. Kwon, M. Park, J. Park, s. Lee, E. Cha,
+%            On stability analysis for neural networks with interval time-varying delays via some new augmented Lyapunov-Krasovskii functional,
+%            Commun Nonlinear Sci Numer Simulat 19 (2014) 3184-3201.
+%References
+%
+%Responsibility for the accuracy of bibliographic citations lies
+%entirely with the authors.
+%
+%Citations in the text: Please ensure that every reference cited in
+%the text is also present in the reference list (and vice versa). Any
+%references cited in the abstract must be given in full. Unpublished
+%results and personal communications should not be in the reference
+%list, but may be mentioned in the text. Citation of a reference as
+%'in press' implies that the item has been accepted for publication.
+%
+%Citing and listing of web references. As a minimum, the full URL
+%should be given. Any further information, if known (author names,
+%dates, reference to a source publication, etc.), should also be
+%given. Web references can be listed separately (e.g., after the
+%reference list) under a different heading if desired, or can be
+%included in the reference list.
+%
+%Text: Indicate references by number(s) in square brackets in line
+%with the text. The actual authors can be referred to, but the
+%reference number(s) must always be given.
+%
+%
+%Example: "..... as demonstrated [3,6]. Barnaby and Jones [8]
+%obtained a different result ...."
+%
+%List: Number the references (numbers in square brackets) in the list
+%in the order in which they appear in the text. Examples: Reference
+%to a journal publication:
+%
+%[1] J. van der Geer, J.A.J. Hanraads, R.A. Lupton, The art of
+%writing a scientific article, J. Sci. Commun. 163 (2000) 51-59.
+%Reference to a book:
+%[2] W. Strunk Jr., E.B. White, The Elements of
+%Style, third ed., Macmillan, New York, 1979. Reference to a chapter
+%in an edited book:
+% [3] G.R. Mettam, L.B. Adams, How to prepare an
+%electronic version of your article, in: B.S. Jones, R.Z. Smith
+%(Eds.), Introduction to the Electronic Age, E-Publishing Inc., New
+%York, 1999, pp. 281-304.
+%
+%When citing Nonlinear Analysis and Nonlinear Analysis: Real World
+%Applications, "Nonlinear Analysis TMA" and "Nonlinear Analysis RWA"
+%should be used respectively.
+
+
+
+%% \bibitem must have the following form:
+%   \bibitem{1}...
+%      \bibitem{2}...
+%         \bibitem{3}...
+%            \bibitem{4}
+%%
+
+% \bibitem{}
+
+ \end{thebibliography}
+
+
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1a-num.tex'.
