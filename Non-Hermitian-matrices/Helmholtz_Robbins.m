@@ -55,7 +55,7 @@ B = spdiags([-e2 e1 -ones(m,1)],[-1 0 1],m,m);
 % ----- Generate the coefficient (tridiagonal) matrix C in Ref. [1] ------
 ex = [zeros(m-1,1);-2*h*p];
 C = spdiags([-e2 ex -ones(m,1)],[-1 0 1],m,m);
-% --- Generate the coefficient (bloc tridiagonal) matrix A in Ref. [1] ---
+% --- Generate the coefficient (block tridiagonal) matrix A in Ref. [1] ---
 A = kron(Im,B) + kron(C,Im);
 % Step 2 assemble the right hand side vector b and exact solution u.
 if opt==1   % we set: u(x,y) = e^(xy)   f(x,y) = -(x^2 + y^2 + k^2)e^(xy)
