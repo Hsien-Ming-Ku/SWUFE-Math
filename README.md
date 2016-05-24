@@ -1,4 +1,4 @@
-# UESTC_Math Test Matrices Library
+# UESTC-Math Test Matrices Library
 
 Test matrices for (shifted) Krylov subspace methods.
 
