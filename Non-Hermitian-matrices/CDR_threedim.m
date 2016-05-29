@@ -5,7 +5,8 @@ function [A,b] = CDR_threedim(nx,ny,nz,beta,r,opt)
 %   u_xx + u_yy + uzz + \vec{\beta}^T \dot \nabla u - r*u = f,
 %   u(x , y, z) = r(x, y, z),
 % by the finite difference method. We can obtain the coefficient matrix A
-% and right-hand side vector b. Here we give some comments:
+% and right-hand side vector b. This test problem in modified from [1-2]. 
+% Here we give some comments:
 % beta = (tau, simga, mu)  % convection coefficients, when tau. sigma, mu
 %                            become larger, the discretized matrix A will
 %                            be more ill-conditioned.
