@@ -1,10 +1,15 @@
 function [A,b] = CDR_threedim(nx,ny,nz,beta,r,opt)
-%
+% This function is used to generat the discretized systems from  three
+% dimensional convection-diffusion-reaction equation in the domain [0,1]
+% \times [0,1]\times [0,1], 
+%   u_xx + u_yy + uzz + \vec{\beta}^T \dot \nabla u - r*u = f,
+%   u(x , y, z) = r(x, y, z),
+% by the finite difference method. We can obtain the coefficient matrix A
+% and right-hand side vector b. Here we give some comments:
 % beta = (tau, simga, mu)  % convection coefficients, when tau. sigma, mu
 %                            become larger, the discretized matrix A will
 %                            be more ill-conditioned.
-%
-%
+% ----------------------------------------------------------------------
 % Reference
 % 1. W.M. Cheung, M.K. Ng, Block-circulant preconditioners for systems 
 %    arising from discretization of the three-dimensional 
@@ -12,6 +17,17 @@ function [A,b] = CDR_threedim(nx,ny,nz,beta,r,opt)
 %    pp. 143-158.
 % 2. E. Jiang, Algorithm for solving shifted skew-symmetric linear system,
 %    Front. Math. China., 2 (2007), pp. 227-242.
+% Copyright by 
+% Mr. Xian-Ming Gu, who works as a PhD student in School of Mathematical
+% Sciences, University of Electronic Science and Technology of China 
+% (UESTC). From 1 August, 2014 to 1 Augest, 2016, He also work in the 
+% Johann Bernoulli Institute for Mathematics and Computer Science (JBI), 
+% University of Groningen (RUG). Prof. Ting-Zhu Huang (UESTC) and Dr. Bruno
+% Carpentieri (RUG) are Xian-Ming's supervisor for PhD program.
+% --------------------------------------------------------------------
+% Email: guxianming@live.cn
+% URL: https://github.com/Hsien-Ming-Ku
+% Date: 29-5-2016, 19:44 (The Netherlands)
 % -----------------------------------------------------------------------
 hx = 1/(1 + nx); hy = 1/(1 + ny); hz = 1/(1 + nz);
 tau = beta(1); sigma = beta(2); mu = beta(3);
