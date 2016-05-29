@@ -10,6 +10,8 @@ function [A,b] = CDR_threedim(nx,ny,nz,beta,r,opt)
 %    arising from discretization of the three-dimensional 
 %    convection-diffusion equation, J. Comput. Appl. Math., 140 (2002), 
 %    pp. 143-158.
+% 2. E. Jiang, Algorithm for solving shifted skew-symmetric linear system,
+%    Front. Math. China., 2 (2007), pp. 227-242.
 % -----------------------------------------------------------------------
 hx = 1/(1 + nx); hy = 1/(1 + ny); hz = 1/(1 + nz);
 tau = beta(1); sigma = beta(2); mu = beta(3);
