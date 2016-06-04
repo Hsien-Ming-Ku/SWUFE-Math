@@ -33,6 +33,8 @@ matrices", "Structured matrices" and "dense matrices". Then a User's guide will 
 
 2) 14:58, 10 May, 2016, I upload two file "Ren.tex"  and "How to prepare your test matrices.pdf" for users, who wants to provide their test matrices for us;
 
+3）18:26. 4 June, 2016, I release a simple preconditioning technique named "indefiniteILU.m";
+
 !!!!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
 X.-M. Gu, T.-Z. Huang, B. Carpentieri, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
