@@ -22,6 +22,18 @@ applications, finally, researchers who work on real applications can provide us 
               ----------------------         ---------------             --------------------           |
                        |<----------------------------------------------------------------------------<--
                        
+Scientific and engineering applications:
+
+1. Computational Electromagnetic, collaborate with researches from ANSYS, Inc., UESTC, Curtin Univ., Texas A&M University, etc;
+
+2. Computational fluid dynamics, collaborate with researches from Univ. of Groningen, TU Delft, TU Denmark, etc;
+
+3. Electronic structure computations, collaborate with researches from Univ. of Tsukuba, Peking Univ., Univ. of Wisconsin Madison, etc;
+
+4. Image processing, collaborate with researches from Xi'an Jiaotong Univ., HKBU, UCLA, etc;
+
+5. Numerical solutions of PDEs/FDEs, collaborate with Russian Academy of Sciences, Purdue Univ., UC Irvine, Univ. Macau, Southeast Univ., etc.
+                       
 ------------------------------------------------------------------------------------------------------------------------------------
 !! Work/update notes: (please also ensure that the source for academic research only, not used for any commercial purposes)
  
