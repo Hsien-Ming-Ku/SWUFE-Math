@@ -6,7 +6,8 @@ This library will be established as another popular test matrix collection, whic
 (2) Collect more complex-valued test matrices, which are common in Computational Electromagnetism and Structural Dynamics;
 
 (3) Dense matrices (including some structured matrices) are particularly included in our test matrix library, the matrix data and the subrontinue for running the dense matrix-vector product are provided for the interested users;
-(4) 
+
+(4) Many the matrix generator files are included and provide for users, then they can modified for their specific research;
 
 %------------------------------------------------------------------
 
