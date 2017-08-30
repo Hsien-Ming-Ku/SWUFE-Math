@@ -1,16 +1,28 @@
 # UESTC-Math Test Matrices Library
 This library will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection). Our new test matrix library will have following new features:
 
-(1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications;
+(1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications; In particular, the size, physical/discretization parameters of various test problems can be flexibly modified on users' requirement;
 
-(2) Collect more complex-valued test matrices, which are common in Computational Electromagnetism and Structural Dynamics;
+(2) Collect more complex-valued test matrices, which are common in many engineering applications, such as Computational Electromagnetism and Structural Dynamics;
 
 (3) Dense matrices (including some structured matrices) are particularly included in our test matrix library, the matrix data and the subrontinue for running the dense matrix-vector product are provided for the interested users;
 
 (4) Many the matrix generator files are included and provide for users, then they can modified for their specific research;
 
-%------------------------------------------------------------------
+(5) Some subrontinues for using classical preconditioning techniques (such as Jacobi, SSOR, ILU, etc) and recent Krylov subspace solvers 
+(e.g., BiCOR, CORS, BiCORSTAB, GPBiCOR, (QMR-)COCR, etc) are also provied for interested users and students;
 
+(6) Test matrices for novel class of matrix computations (such as eigenvalue problems, matrix function, shifted linear systems, linear systems with multiple right-hand sides, etc) are especially added;
+
+At last but not least, we will also plan to give a systematic framework for making a relible numerical comparsion among different algorithms, and then users can conclude some useful information/suggestions for practical applications. We hope that our test matrix library can provide test problems for algorithm researchers, they can provide some robust algorithms for scientific and engineering 
+applications, finally, researchers who work on real applications can provide us more new and difficult test problems.
+ 
+              ----------------------         ---------------             --------------------
+             | Numerical simultions | ----> | Test problems |   ------> | Algorithm research | --------->
+              ----------------------         ---------------             --------------------           |
+                       |<----------------------------------------------------------------------------<--
+
+------------------------------------------------------------------------------------------------------------------------------------
 !!! NOTE:
 
 Some test matrices are used for investigating the performance of shifted Krylov subspace methods
