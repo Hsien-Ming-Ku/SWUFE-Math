@@ -22,8 +22,9 @@ applications, finally, researchers who work on real applications can provide us 
               ----------------------         ---------------             --------------------           |
                        |<----------------------------------------------------------------------------<--
 
-PS: 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
-    2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/
+References: 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
+            
+            2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/
 ------------------------------------------------------------------------------------------------------------------------------------
 !! Work/update notes: (please also ensure that the source for academic research only, not used for any commercial purposes)
  
