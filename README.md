@@ -24,7 +24,7 @@ applications, finally, researchers who work on real applications can provide us 
                        
 Scientific and engineering applications:
 
-1. Computational Electromagnetic, collaborate with researches from ANSYS, Inc., UESTC, Curtin Univ., Texas A&M University, INRIA, etc;
+1. Computational Electromagnetic, collaborate with researches from ANSYS, Inc., UESTC, Curtin Univ., Univ. of Texas at Austin, INRIA, etc;
 
 2. Computational fluid dynamics, collaborate with researches from Univ. of Groningen, TU Delft, TU Denmark, Univ. of British Columbia,  etc;
 
