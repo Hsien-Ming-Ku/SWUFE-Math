@@ -1,5 +1,5 @@
 # UESTC-Math Test Matrices Library
-This library named "UESTC-Math Test Matrices Library" will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection). Our new test matrix library will have following new features:
+This library named "UESTC-Math Test Matrices Library" will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market (http://math.nist.gov/MatrixMarket/matrices.html) and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection, http://www.cise.ufl.edu/research/sparse/matrices/). Our new test matrix library will have following new features:
 
 (1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications; In particular, the size, physical/discretization parameters of various test problems can be flexibly modified on users' requirement;
 
@@ -22,8 +22,6 @@ applications, finally, researchers who work on real applications can provide us 
               ----------------------         ---------------             --------------------           |
                        |<----------------------------------------------------------------------------<--
                        
-{Footnotes: 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html                                                           
-            2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/}
 ------------------------------------------------------------------------------------------------------------------------------------
 !! Work/update notes: (please also ensure that the source for academic research only, not used for any commercial purposes)
  
