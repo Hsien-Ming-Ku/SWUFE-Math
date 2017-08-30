@@ -1,5 +1,5 @@
 # UESTC-Math Test Matrices Library
-This library will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection). Our new test matrix library will have following new features:
+This library named "UESTC-Math Test Matrices Library" will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection). Our new test matrix library will have following new features:
 
 (1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications; In particular, the size, physical/discretization parameters of various test problems can be flexibly modified on users' requirement;
 
@@ -22,36 +22,22 @@ applications, finally, researchers who work on real applications can provide us 
               ----------------------         ---------------             --------------------           |
                        |<----------------------------------------------------------------------------<--
 
+PS: 1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
+    2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/
 ------------------------------------------------------------------------------------------------------------------------------------
-!!! NOTE:
+!! Work/update notes: (please also ensure that the source for academic research only, not used for any commercial purposes)
+ 
+1) In September 2016, our "UESTC-Math Matrix Library" has some sub-collections, i.e., "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. 
 
-Some test matrices are used for investigating the performance of shifted Krylov subspace methods
+2) 4 June, 2016, I release some simple preconditioning techniques, who named "scaling2.m", "SSOR.m" and "indefiniteILU.m";
 
-(A - sigma_i *I) = b, sigma_i \in \mathbb{C}, i = 1,2,...,t.
+3) 10 July, 2016, I upload two file "Ren.tex"  and "How to prepare your test matrices.pdf" for users, who wants 
+to provide their interesting test matrices for us;
 
-These test matrices A are from the Numerical Linear Algebra (NLA) Course of Prof. Gerard L.G. Sleijpen 
-(Mathematical Institute, Utrecht University, The Netherlands, Homepage: http://www.staff.science.uu.nl/~sleij101/, but recently the link of his NLA Course is often badly available). Moreover, some matrices come from two popular test matrix collections:
+4）Before the end of 2017, we plan to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
 
-1. Matrix Market: http://math.nist.gov/MatrixMarket/matrices.html
-2. The University of Florida Sparse Matrix Collection: http://www.cise.ufl.edu/research/sparse/matrices/
+!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
-!!!! So please also ensure that the source for academic research only, not used for any commercial purposes.
-
-!!!  I put them here just for the convenience of my research program.
-
-% Good news: 
-Dear everyone, recently I plan to post some frequently-used test matrices in my repositories. We named this collection as 
-"UESTC-Math Matrix Library". I will devide them into "Non-Hermitian matrices", "Complex symmetric matrices", "Hermitian 
-matrices", "Structured matrices" and "dense matrices". Then a User's guide will be given and updated. The updated information has been given as follows.
-
-1) 17:56, 2 May, 2016, I release a simple preconditioning technique named "scaling2.m";
-
-2) 14:58, 10 May, 2016, I upload two file "Ren.tex"  and "How to prepare your test matrices.pdf" for users, who wants to provide their test matrices for us;
-
-3）18:26. 4 June, 2016, I release a simple preconditioning technique named "indefiniteILU.m";
-
-!!!!! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
-
-X.-M. Gu, T.-Z. Huang, B. Carpentieri, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
-System and Eigenvalue Problem, Technical Report, version 1.0, School of Mathematical Sciences, University of Electronic Science 
+X.-M. Gu, B. Carpentieri, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
+System and Eigenvalue Problem, Technical Report, School of Mathematical Sciences, University of Electronic Science 
 and Technology of China, April 26, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/UESTC-Math}.
