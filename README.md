@@ -1,10 +1,8 @@
 # UESTC-Math Test Matrices Library
-hhhhhh
-Test matrices for (shifted) Krylov subspace methods.
-
-Certainly, these matrices also can be used for investigating the performance 
-of Krylov subspace method for A*x = b and the corresponding preconditioning 
-techniques.
+This library will be established as another popular test matrix collection, which will be different from some previous test matrix collections, such as Matrix Market and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection). Our new test matrix library will have following new features: 
+(1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications;
+(2) Collect more complex-valued test matrices, which are common in Computational Electromagnetism and Structural Dynamics;
+(3) Dense matrices (including some structured matrices) are particularly included in our test matrix library, the matrix data and the subrontinue for running the dense matrix-vector product are provided for the interested users.
 
 %------------------------------------------------------------------
 
