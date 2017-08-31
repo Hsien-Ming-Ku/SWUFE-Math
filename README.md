@@ -30,7 +30,7 @@ Scientific and engineering applications:
 
 3. Electronic structure computations, collaborate with researches from Univ. of Tsukuba, Peking Univ., Univ. of Wisconsin Madison, etc;
 
-4. Image processing, collaborate with researches from Xi'an Jiaotong Univ., HKBU, UCLA, TU Denmark, etc;
+4. Image processing, collaborate with researches from Xi'an Jiaotong Univ., HKBU, UCLA, TU Denmark, Univ. of Insubria, etc;
 
 5. Numerical solutions of PDEs/FDEs, collaborate with Russian Academy of Sciences, Purdue Univ., UC Irvine, Univ. of Macau, Southeast Univ., etc.
                        
