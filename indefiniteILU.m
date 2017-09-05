@@ -11,7 +11,7 @@ function [L,U] = indefiniteILU(A)
 % References:
 % 1. E. Chow and Y. Saad, Experimental study of ILU preconditioners for 
 %    indefinite matrices, J. Comput. Appl. Math., 86 (1997), pp. 387-414.
-% 2. S. Güttel and J. Pestana, Some observations on weighted GMRES, Numer. 
+% 2. S. GÃ¼ttel and J. Pestana, Some observations on weighted GMRES, Numer. 
 %    Algorithms, 67 (2014), pp. 733-752.
 % ---------------------------------------------------------------------
 % Written by: 
@@ -31,23 +31,24 @@ n = size(A,1);
 t = max(abs(d));
 sr = min(abs(d));
 if t==0   % all diagonal entries are zeros
-   sigma = 1e-12; % optimal
+   sigma = 1e-12; % recommended, even you can try "simga = 1e-14"
 elseif (t~=0 && sr==0) % some but not all diagonal elements a_ii of A zero
-   sigma = (1e-12)*t;  
+   sigma = (1e-12)*t;  % recommended, even you can try "simga = (1e-14)*t"
 else
    sigma = 0; % no zeros in its diagonal part.  
 end
 % ------------------ creat the auxiliary matrix A1 ----------------------
 A1 = A + sigma*speye(n,n);
 % ------- choose the suitable kind of ILU decomposition for A1 -----------
-setup.type = 'crout';
-setup.milu = 'row';
-setup.droptol = 0.01;
+setup.type = 'crout';  % can be revised for your study, 
+setup.milu = 'row';    % can be revised for your study, 
+setup.droptol = 0.01;  % can be revised for your study, e.g., 0.001;
 % the above choice is just an example !! you can obtain the suitable ILU
-% decomposition by your own decision.
+% decomposition by your own decision. Please refer to "ilu doc" !!!
 % ------------------------------------
 [L,U] = ilu(A1,setup); % Then L, U is just the targeted ILU preconditioner
                        % for original coefficient matrix A.
+clear A1;
 
 
 
