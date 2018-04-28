@@ -1,5 +1,5 @@
-# UESTC-Math Test Matrices Library
-The library named "UESTC-Math Test Matrices Library" will be established as another popular test matrix collection, which is different from some previous test matrix collections, such as Matrix Market (http://math.nist.gov/MatrixMarket/matrices.html) and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection, http://www.cise.ufl.edu/research/sparse/matrices/). Our new test matrix library will have following new features:
+# SWUFE-Math Test Matrices Library
+The library named "SWUFE-Math Test Matrices Library" will be established as another popular test matrix collection, which is different from some previous test matrix collections, such as Matrix Market (http://math.nist.gov/MatrixMarket/matrices.html) and The SuiteSparse Matrix Collection (formerly known as the University of Florida Sparse Matrix Collection, http://www.cise.ufl.edu/research/sparse/matrices/). Our new test matrix library will have following new features:
 
 (1) Almost all of test matrices (including the corresponding right-hand side vectors) are from practical simulation applications; In particular, the size, physical/discretization parameters of various test problems can be flexibly modified on users' requirement;
 
@@ -44,7 +44,9 @@ Scientific and engineering applications:
 3) 10 July, 2016, I upload two file "Ren.tex"  and "How to prepare your test matrices.pdf" for users, who wants 
 to provide their interesting test matrices for us;
 
-4）Before the end of 2017, we plan to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
+4）At the end of 2017, we fail to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices;
+
+5）Before the end of 2018, we plan to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
 
 !! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
