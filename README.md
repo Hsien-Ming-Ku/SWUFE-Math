@@ -46,10 +46,10 @@ to provide their interesting test matrices for us;
 
 4）At the end of 2017, we fail to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices;
 
-5）Before the end of 2018, we plan to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
+5）Before the end of 2018, we will try our best to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
 
 !! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
 X.-M. Gu, B. Carpentieri, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
 System and Eigenvalue Problem, Technical Report, School of Mathematical Sciences, University of Electronic Science 
-and Technology of China, April 26, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/UESTC-Math}.
+and Technology of China, April 26, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/SWUFE-Math}.
