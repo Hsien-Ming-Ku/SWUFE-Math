@@ -50,6 +50,6 @@ to provide their interesting test matrices for us;
 
 !! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
-X.-M. Gu, B. Carpentieri, T.-Z. Huang, L. Li, Y. Zhang, H.-B. Li, Y.-L. Zhao, UESTC-Math Test Matrix Library based on MATLAB: Linear 
-System and Eigenvalue Problem, Technical Report, School of Mathematical Sciences, University of Electronic Science 
-and Technology of China, April 26, 2016. Available online at \url{https://github.com/Hsien-Ming-Ku/SWUFE-Math}.
+X.-M. Gu, B. Carpentieri, T.-Z. Huang, L. Li, H.-B. Li, Y.-L. Zhao, SWUFE-Math Test Matrix Library based on MATLAB: Linear 
+System and Eigenvalue Problem, Technical Report, School of Economic Mathematics, Southwestern University of Finance and 
+Economics, July 26, 2017. Available online at \url{https://github.com/Hsien-Ming-Ku/SWUFE-Math}.
