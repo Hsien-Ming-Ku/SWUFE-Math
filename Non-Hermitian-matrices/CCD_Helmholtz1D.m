@@ -1,6 +1,6 @@
 function [A,b] = CCD_Helmholtz1D(n,k,opt)
 % This function is used to generate the saddle-point type linear systems
-%        [A11   A12 A13]   [1/h^2 *f]   [ 0 ]
+%        [A11   A12 A13]   [1/h^2 *f]   [ 0 ] 
 %        [A21   A22 A23] * [1/h *f' ] = [ 0 ]
 %        [eta*I  0   I ]   [  f''   ]   [ g ],
 % Moreover, this system is from the Combined Compact Difference Method for 
@@ -32,37 +32,57 @@ function [A,b] = CCD_Helmholtz1D(n,k,opt)
 h = 1/(n - 1);
 eta = (k*h)^2;
 % ---------  Generate the sub-matrix A11  ---------------%
-a2 = [0 3*ones(1,n-2)]; a3 = a2(end:-1:1);
+% a2 = [0 3*ones(1,n-2)]; a3 = a2(end:-1:1);
+a2 = [0;0;3*ones(n-2,1)]; a3 = a2(end:-1:1);
 if (opt==1 || opt == 3)
-   a1 = [-1 -6*ones(1,n-2) -1];
-   A11 = diag(a1) + diag(a2,1) + diag(a3,-1);
+   % a1 = [-1 -6*ones(1,n-2) -1];
+   a1 = [-1;-6*ones(n-2,1);-1];
+   % A11 = diag(a1) + diag(a2,1) + diag(a3,-1);
+   A11 = spdiags([a3 a1 a2],[-1 0 1],n,n);
 else
-   a1 = [-1 -6*ones(1,n-2) -1i*k];
-   A11 = diag(a1) + diag(a2,1) + diag(a3,-1);
+   % a1 = [-1 -6*ones(1,n-2) -1i*k];
+   a1 = [-1;-6*ones(n-2,1);-1i*k];
+   % A11 = diag(a1) + diag(a2,1) + diag(a3,-1);
+   A11 = spdiags([a3 a1 a2],[-1 0 1],n,n);
 end
 % ---------  Generate the sub-matrix A12  ---------------%
-b1 = [0 (-9/8)*ones(1,n-2)]; b2 = -b1(end:-1:1);
+% b1 = [0 (-9/8)*ones(1,n-2)]; b2 = -b1(end:-1:1);
+b1 = [0;0;(-9/8)*ones(n-2,1)]; b2 = -b1(end:-1:1)
 if (opt==1 || opt == 3)
-   A12 = diag(b1,1) + diag(b2,-1);
+  %  A12 = diag(b1,1) + diag(b2,-1);
+  A12 = spdiags([b2 zeros(n,1) b1],[-1 0 1],n,n);
 else
-   A12 = diag(b1,1) + diag(b2,-1); A12(n,n) = 1/h;
+   % A12 = diag(b1,1) + diag(b2,-1); A12(n,n) = 1/h;
+   A12 = spdiags([b2 zeros(n,1) b1],[-1 0 1],n,n);A12(n,n) = 1/h;
 end
 % ---------  Generate the sub-matrix A13  -------------- %
-c1 = [0 -ones(1,n-2) 0];
-c2 = [0 (1/8)*ones(1,n-2)]; c3 = c2(end:-1:1);
-A13 = diag(c1) + diag(c2,1) + diag(c3,-1);
+% c1 = [0 -ones(1,n-2) 0];
+c1 = [0;-ones(n-2,1);0];
+% c2 = [0 (1/8)*ones(1,n-2)]; c3 = c2(end:-1:1);
+c2 = [0;0;(1/8)*ones(n-2,1)]; c3 = c2(end:-1:1);
+% A13 = diag(c1) + diag(c2,1) + diag(c3,-1);
+A13 = spdiags([c3 c1 c2],[-1 0 1],n,n);
 % ---------  Generate the sub-matrix A21  --------------- %
-d1 = [31 zeros(1,n-2) -31];
-d2 = [-32 -15*ones(1,n-2)]; d3 = -d2(end:-1:1);
-A21 = diag(d1) + diag(d2,1) + diag(d3,-1); A21(1,3) = 1; A21(n,n-2) = -1;
+% d1 = [31 zeros(1,n-2) -31];
+d1 = [31;zeros(n-2,1);-31];
+% d2 = [-32 -15*ones(1,n-2)]; d3 = -d2(end:-1:1);
+d2 = [0;-32;-15*ones(n-2,1)]; d3 = -d2(end:-1:1);
+% A21 = diag(d1) + diag(d2,1) + diag(d3,-1); A21(1,3) = 1; A21(n,n-2) = -1;
+A21 = spdiags([d3 d1 d2],[-1 0 1],n,n); A21(1,3) = 1; A21(n,n-2) = -1;
 % ---------  Generate the sub-matrix A22  --------------- %
-e1 = [14 16*ones(1,n-2) 14];
-e2 = [16 7*ones(1,n-2)]; e3 = e2(end:-1:1);
-A22 = diag(e1) + diag(e2,1) + diag(e3,-1);
+% e1 = [14 16*ones(1,n-2) 14];
+e1 = [14;16*ones(n-2,1);14];
+% e2 = [16 7*ones(1,n-2)]; e3 = e2(end:-1:1);
+e2 = [0;16;7*ones(n-2,1)]; e3 = e2(end:-1:1);
+% A22 = diag(e1) + diag(e2,1) + diag(e3,-1);
+A22 = spdiags([e3 e1 e2],[-1 0 1],n,n);
 % ---------  Generate the sub-matrix A23 --------------- %
-f1 = [2 zeros(1,n-2) -2];
-f2 = [-4 -ones(1,n-2)]; f3 = -f2(end:-1:1);
-A23 = diag(f1) + diag(f2,1) + diag(f3,-1);
+% f1 = [2 zeros(1,n-2) -2];
+f1 = [2;zeros(n-2,1);-2];
+% f2 = [-4 -ones(1,n-2)]; f3 = -f2(end:-1:1);
+f2 = [0;-4;-ones(n-2,1)]; f3 = -f2(end:-1:1);
+% A23 = diag(f1) + diag(f2,1) + diag(f3,-1);
+A23 = spdiags([f3 f1 f2],[-1 0 1],n,n);
 % ---------- Assemble the global coefficient matrix ----- %
 I = speye(n); O = zeros(n,n);
 A = [A11 A12 A13;A21 A22 A23;eta*I O I];
