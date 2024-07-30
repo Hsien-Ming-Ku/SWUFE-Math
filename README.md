@@ -48,6 +48,8 @@ to provide their interesting test matrices for us;
 
 5）Before the end of 2018, we will try our best to release the first version of the User's Guide and test matrix data with ten sub-collections of test matrices; (in progress)
 
+6) In June, 2024. the memeber of our research group, Miss Yueyue Liu finished her Master thesis about how to build and use this test matrix library, the thesis will be open access after one year (according to rules of our univeresity).
+
 !! If you intend to use the software, please do not forget to place the proper acknowledgements. Or maybe cite them as
 
-X.-M. Gu, Y. Liu, B. Carpentieri, Y.-L. Zhao, SWUFE-Math Test Matrix Library based on MATLAB: Linear System and Eigenvalue Problem, Technical Report, School of Mathematics, Southwestern University of Finance and Economics, July 26, 2017. Available online at \url{https://github.com/Hsien-Ming-Ku/SWUFE-Math}.
+X.-M. Gu, Y. Liu, B. Carpentieri, Y.-L. Zhao, SWUFE-Math Test Matrix Library based on MATLAB: Linear System and Eigenvalue Problem, Technical Report, School of Mathematics, Southwestern University of Finance and Economics, July 26, 2017 (version 1). Available online at \url{https://github.com/Hsien-Ming-Ku/SWUFE-Math}.
