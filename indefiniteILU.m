@@ -45,9 +45,10 @@ setup.milu = 'row';    % can be revised for your study,
 setup.droptol = 0.01;  % can be revised for your study, e.g., 0.001;
 % the above choice is just an example !! you can obtain the suitable ILU
 % decomposition by your own decision. Please refer to "ilu doc" !!!
+% This is also an interesting ILU(k) preconditioner available in "Killian Miller (2024). ILU(k) Preconditioner (https://www.mathworks.com/matlabcentral/fileexchange/48320-ilu-k-preconditioner), MATLAB Central File Exchange. (accessed on 2024/7/30)."
 % ------------------------------------
 [L,U] = ilu(A1,setup); % Then L, U is just the targeted ILU preconditioner
-                       % for original coefficient matrix A.
+                       % for original coefficient matrix A. % ILU(k) also can be suitably used.
 clear A1;
 
 
