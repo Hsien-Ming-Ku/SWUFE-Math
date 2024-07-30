@@ -29,16 +29,16 @@ function [DA,Db,D1] = scaling2(A, b, p, opt)
 % 4. A. van der Sluis, Condition numbers and equilibration of matrices, 
 %    Numer. Math., 14 (1969), pp 14--23.
 % -----------------------------------------------------------------------
-% Developped (or copyright) by Hsien-Ming Ku, who is a one-year Ph.D.
-% student of the School of Mathematical Sciences, University of Electronic
-% Science and Technology of China, Chengdu, 611731, P. R. China. His tutor
-% is Prof. Ting-Zhu Huang.
+% Developped (or copyright) by Hsien-Ming Ku, who is an associate professor
+% of the School of Mathematics, Southwestern University of Finance and Economics, Chengdu, 
+% 611130, P. R. China. 
 % Contact us by e-mail,
-% E-mail: guxianming@live.cn, tingzhuhuang@126.com
-% Thank to Dr. Jing Meng and Dr. Liang Li for their kind suggestions to
+% E-mail: guxianming@live.cn
+% Thank to Dr. Jing Meng and Prof. Liang Li for their kind suggestions to
 % modify the codes.
 % Date: 2013-12-16; (Chengdu)
 % Posted date: 2-5-2016, 17:55 (the Netherlands)
+% updated date: 30/7/2024 (Chengdu)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if nargin <2 || isempty(b)
     b = [];
