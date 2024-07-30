@@ -75,6 +75,7 @@ end
  f1 = F(freenodes);
  
  [U(freenodes),~] = gmres(L1,f1,30,1e-9);  % here you can try to use your own iterative solvers.
+ % U(freenodes) = L1\f1;  % direct solver in MATLAB "backslash"
  H = sigma(:).*U.*conj(U);
 
  
